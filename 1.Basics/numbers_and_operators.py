@@ -5,8 +5,8 @@ Numeric types in Python:
   - complex
 """
 
-1 # int
-3.2 # float
+1  # int
+3.2  # float
 
 print(type(-1))  # <class 'int'>
 print(type(0.5))  # <class 'float'>
