@@ -13,6 +13,8 @@ for char in "hello":
 for x in range(1, 10):  # 1 - 9
     print(x ** 2)
 
+# range(start, end, step)
+
 range(10)  # 0 - 9
 range(2, 10, 2)  # 2 4 6 8
 
