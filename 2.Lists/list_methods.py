@@ -1,26 +1,26 @@
 data = [12, 5, 7]
 
-# append - to add an item to the end of the list
+# append - adds an item to the end of the list
 
 data.append(21)
 print(data)  # [12, 5, 7, 21]
 
-# extend - to add the elements of the list to tthe end of the current list
+# extend - adds the elements of the list to tthe end of the current list
 
 data.extend([9, 24, 31])
 print(data)  # [12, 5, 7, 21, 9, 24, 31]
 
-# insert - to add an item at the specified position
+# insert - adds an item at the specified position
 
 data.insert(0, -1)
 print(data)  # [-1, 12, 5, 7, 21, 9, 24, 31]
 
-# clear - to remove all the items of the list
+# clear - removes all the items of the list
 
 data.clear()
 print(data)  # []
 
-# pop - to remove the item at the specified position, returns removed value
+# pop - removes the item at the specified position, returns removed value
 
 data = [1, 2, 11, 1, 3, 4]
 
@@ -28,7 +28,7 @@ data.pop()  # if no index is specified, removes the last item (4)
 data.pop(1)  # 2
 print(data)  # [1, 11, 1, 3]
 
-# remove - to remove the item with the specified value
+# remove - removes the item with the specified value
 
 data.remove(1)
 print(data)  # [11, 1, 3]
@@ -44,12 +44,12 @@ print([5, 1, 3, 4, 3, 2, 5, 3].index(3, 3, 5))  # 4
 
 print([1, 5, 1, 3, 2].count(1))  # 2
 
-# reverse - to reverse the order of the list
+# reverse - reverses the order of the list
 
 data.reverse()
 print(data)  # [3, 1, 11]
 
-# sort - to sort the list
+# sort - sorts the list
 
 data.sort()
 print(data)  # [1, 3, 11]
@@ -58,7 +58,7 @@ print(data)  # [1, 3, 11]
 
 print(', '.join(["Hello", "world"]))  # "Hello, world"
 
-# slice - to make a new list using slices of the other list
+# slice - makes a new list using slices of the other list
 # old_list[start:end:step]
 
 # start
