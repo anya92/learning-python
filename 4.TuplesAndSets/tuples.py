@@ -49,3 +49,11 @@ i = len(days) - 1
 while i >= 0:
     print(days[i])
     i -= 1
+
+# nested tuples
+
+t = (1, (2, 3), 4)
+
+print(t[0])  # 1
+print(t[1])  # (2, 3)
+print(t[1][1])  # 3
