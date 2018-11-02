@@ -1,7 +1,6 @@
-"""
-  Function:
-  - a block of code which only runs when it is called.
-"""
+# Function:
+# - a block of code which only runs when it is called.
+
 
 # defining a function
 

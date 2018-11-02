@@ -1,9 +1,7 @@
-"""
-  Sets:
-  - collections which are unordered and unindexed
-  - items will appear in a random order
-  - are written with curly brackets
-"""
+# Sets:
+# - collections which are unordered and unindexed
+# - items will appear in a random order
+# - are written with curly brackets
 
 # creating sets
 

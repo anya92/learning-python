@@ -1,8 +1,6 @@
-"""
-  List:
-  - a collection which is ordered and changeable
-  - written with square brackets
-"""
+# List:
+# - a collection which is ordered and changeable
+# - written with square brackets
 
 # creating lists
 

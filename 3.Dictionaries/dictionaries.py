@@ -1,8 +1,6 @@
-"""
-  Dictionaries:
-  - collections which are unordered, changeable and indexed
-  - are written with curly brackets, and they have keys and values.
-"""
+# Dictionaries:
+# - collections which are unordered, changeable and indexed
+# - are written with curly brackets, and they have keys and values.
 
 # creating dictionaries
 

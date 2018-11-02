@@ -1,8 +1,6 @@
-"""
-  Tuples:
-  - collections which are ordered and unchangeable
-  - are written with round brackets
-"""
+# Tuples:
+# - collections which are ordered and unchangeable
+# - are written with round brackets
 
 # creating tuples
 

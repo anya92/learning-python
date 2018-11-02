@@ -1,9 +1,7 @@
 # for loop
 
-"""
-for item in iterable_object:
-  do sth with item
-"""
+# for item in iterable_object:
+#   do sth with item
 
 # iterable_object - collection of items, e.g. a list of numbers, a string of characters, a range
 
