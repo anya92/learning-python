@@ -56,4 +56,4 @@ print(Person.how_many_people())  # 'There are 2 people.'
 person3 = Person.from_string("Ron,Swanson,56")
 print(person3.full_name())  # Ron Swanson
 
-print(person3)
+print(person3)  # Ron Swanson, 56
