@@ -6,6 +6,11 @@ class Person:  # creating a class
     def how_many_people(cls):
         return f"There are {cls.count} people."
 
+    @classmethod
+    def from_string(cls, data_string):
+        first, last, age = data_string.split(',')
+        return cls(first, last, int(age))
+
     # __init__() - a function which is always executed when the class is being initiated
     # parameter self - a reference to the class itself
 
@@ -15,6 +20,9 @@ class Person:  # creating a class
         self.last = last
         self.age = age
         Person.count += 1
+
+    def __repr__(self):
+        return f"{self.first} {self.last}, {self.age}"
 
     def full_name(self):  # instance method
         return f"{self.first} {self.last}"
@@ -44,3 +52,8 @@ person2.birthday()
 print(person2.age)  # 34
 
 print(Person.how_many_people())  # 'There are 2 people.'
+
+person3 = Person.from_string("Ron,Swanson,56")
+print(person3.full_name())  # Ron Swanson
+
+print(person3)
