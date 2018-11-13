@@ -1,3 +1,10 @@
+# Object Oriented Programming - solving a programming problems by creating objects
+
+# a class - a blueprint for the object
+# an object - an instantiation of a class
+
+# methods - functions defined inside the body of a class
+
 
 class Person:  # creating a class
     count = 0  # class attribute
