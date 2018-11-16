@@ -21,6 +21,9 @@ class Deck:
     def __repr__(self):
         return f"Deck of {self.count()} cards"
 
+    def __iter__(self):
+        return iter(self.cards)
+
     def count(self):
         return len(self.cards)
 
@@ -58,3 +61,7 @@ print(card)  # e.g. 'J of Hearts
 hand = deck.deal_hand(5)
 print(hand)
 # e.g. [7 of Hearts, 9 of Hearts, Q of Clubs, 10 of Clubs, J of Clubs]
+
+for card in deck:
+    # if class does not contain __iter__ method -> TypeError: 'Deck' object is not iterable
+    print(card)

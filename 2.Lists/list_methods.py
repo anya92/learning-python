@@ -5,7 +5,7 @@ data = [12, 5, 7]
 data.append(21)
 print(data)  # [12, 5, 7, 21]
 
-# extend - adds the elements of the list to tthe end of the current list
+# extend - adds the elements of the list to the end of the current list
 
 data.extend([9, 24, 31])
 print(data)  # [12, 5, 7, 21, 9, 24, 31]
