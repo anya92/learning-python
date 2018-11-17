@@ -21,3 +21,21 @@ print(next(counter))  # 2
 print(next(counter))  # 3
 print(next(counter))  # 4
 print(next(counter))  # 5
+
+
+def current_beat():  # infinite generator
+    nums = (1, 2, 3, 4)
+    i = 0
+    while True:
+        if i >= len(nums):
+            i = 0
+        yield nums[i]
+        i += 1
+
+
+beat = current_beat()
+print(next(beat))  # 1
+print(next(beat))  # 2
+print(next(beat))  # 3
+print(next(beat))  # 4
+print(next(beat))  # 1
