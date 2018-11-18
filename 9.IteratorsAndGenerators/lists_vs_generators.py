@@ -1,3 +1,4 @@
+# The main advantage of generator over a list is that it take much less memory.
 import sys
 
 list_comp = sys.getsizeof([x for x in range(10000)])
