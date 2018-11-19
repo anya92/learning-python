@@ -38,3 +38,42 @@ say_goodbye()
 # Before the function is called.
 # Goodbye!
 # After the function is called.
+
+# decorators with multiple arguments -> use *args and **kwargs in the inner wrapper function
+
+
+def my_decor(fn):
+    def wrapper(name):
+        return fn(name).upper()
+    return wrapper
+
+
+@my_decor
+def hello(name):
+    return f"Hello, {name}."
+
+
+print(hello("world"))  # HELLO, WORLD.
+
+
+@my_decor
+def full_name(first, last):
+    return f"My name is {first} {last}."
+
+
+# print(full_name("Stephen", "King"))
+# TypeError: wrapper() takes 1 positional argument but 2 were given
+
+
+def my_decor_2(fn):
+    def wrapper(*args, **kwargs):
+        return fn(*args, ** kwargs).upper()
+    return wrapper
+
+
+@my_decor_2
+def full_name_2(first, last):
+    return f"My name is {first} {last}."
+
+
+print(full_name_2("Stephen", "King"))  # MY NAME IS STEPHEN KING.
