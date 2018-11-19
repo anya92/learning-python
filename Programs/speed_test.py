@@ -8,21 +8,26 @@ def speed_test(fn):
         start_time = time.time()
         result = fn(*args, **kwargs)
         end_time = time.time()
-        print(f"Executing: {fn.__name__}")
-        print(f"Time Elapsed: {end_time - start_time}")
+        print(
+            f"Finished {fn.__name__!r} in {(end_time - start_time):.4f}s")
         return result
     return wrapper
 
 
 @speed_test
 def sum_nums_gen():
-    return sum(x for x in range(50000000))
+    return sum(x for x in range(10000000))
 
 
 @speed_test
 def sum_nums_list():
-    return sum([x for x in range(50000000)])
+    return sum([x for x in range(10000000)])
 
 
 print(sum_nums_gen())
+# Finished 'sum_nums_gen' in 1.9080s
+# 49999995000000
+
 print(sum_nums_list())
+# Finished 'sum_nums_list' in 2.4441s
+# 49999995000000
