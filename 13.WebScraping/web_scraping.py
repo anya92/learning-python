@@ -15,7 +15,7 @@ html = """
       <p>Some text</p>
     </div>
     <ol>
-      <li class="special">Special item 1</li>
+      <li class="special extra-special">Special item 1</li>
       <li class="special">Special item 2</li>
     </ol>
     <div data-example="yes">End</div>
@@ -61,3 +61,18 @@ print(soup.select('.special'))
 print(soup.select('div'))
 # attribute
 print(soup.select('[data-example]'))
+
+# accessing data
+
+el = soup.select('.special')[0]
+print(el)  # <li class="special">Special item 1</li>
+print(el.get_text())  # 'Special item 1'
+
+print(el.name)  # li
+print(el.attrs)  # {'class': ['special', 'extra-special']}
+
+for element in soup.select('.special'):
+    print(element.get_text())
+
+    # Special item 1
+    # Special item 2
