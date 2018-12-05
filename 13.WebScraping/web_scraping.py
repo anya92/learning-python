@@ -29,7 +29,8 @@ print(type(soup))  # <class 'bs4.BeautifulSoup'>
 
 print(soup.body)  # <body> <div id = "first" > (...)
 
-print(soup.find('li'))  # <li class="special">Special item 1</li> (only first)
+print(soup.find('li'))
+# <li class="special">Special item 1</li> (only first)
 
 print(soup.find_all('li'))
 # [<li class="special">Special item 1</li>,
@@ -48,3 +49,15 @@ print(soup.find_all(class_="special"))
 print(soup.find_all(attrs={"data-example": "yes"}))
 # [<h3 data-example="yes">Site title</h3>,
 #  <div data-example="yes">End</div>]
+
+# CSS selectors
+
+# id
+print(soup.select('#first'))  # returns a list
+print(soup.select('#first')[0])
+# class
+print(soup.select('.special'))
+# tag name
+print(soup.select('div'))
+# attribute
+print(soup.select('[data-example]'))
