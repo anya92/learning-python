@@ -76,3 +76,30 @@ for element in soup.select('.special'):
 
     # Special item 1
     # Special item 2
+
+
+# navigating
+
+print(soup.body.contents)
+# ['\n', <div id="first">
+#  <h3 data-example = "yes" > Site title < /h3 >, ... ]
+
+print(soup.body.contents[1].next_sibling)  # '\n'
+print(soup.body.contents[1].next_sibling.next_sibling)
+# <ol>
+#   <li class="special extra-special">Special item 1</li>
+#   <li class="special">Special item 2</li>
+# </ol>
+
+print(soup.find(class_='extra-special').parent)  # <ol>...
+
+print(soup.find(class_='extra-special').parent.parent)  # <body> ...
+
+print(soup.find("h3").find_parent())  # <div id="first"> ...
+
+print(soup.find("h3").find_parent("html"))  # <html> ...
+
+print(soup.find(id="first").find_next_sibling())  # <ol> ...
+
+print(soup.find(id="first").find_next_sibling().find_next_sibling())
+# <div data-example="yes">End</div>
